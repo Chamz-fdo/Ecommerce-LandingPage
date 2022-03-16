@@ -4,7 +4,7 @@ import {popularProducts} from "../data";
 import Product from "./Product";
 
 const Container = styled.div`
-    padding: 100px;
+    padding: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
 `;

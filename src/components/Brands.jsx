@@ -4,35 +4,28 @@ import { brands } from "../data";
 
 const Container = styled.div`
     display: flex;
-    padding: 20px;
+    padding: 0px 200px 100px 200px;
     justify-content: space-between;
+     
+     
 `;
 
 const ImgContainer = styled.div`
     
 `;
 
-const Image = styled.div`
-    height: 5px;
-    width: 15px;
-`;
-
-const Button = styled.button`
-    border: none;
-    border-radius: 20px;
-    margin-top: 25px;
-    padding: 15px 35px 15px 35px;
-    background-color: #d4f2ff;
-    box-shadow: 1px 3px #a6a6a6;
-    color: black;
-    cursor: pointer;
-    font-weight: 500;
+const Image = styled.img`
+    height: 120px;
+    width: 180px;
     transition: all 0.5s ease;
+    opacity: 0.5;
+    cursor: pointer;
     
     &:hover{
-        color: gray;
-        transform: scale(1.1);
-`; 
+        opacity: 100%;
+        transform: scale(1.1)
+`;
+
 
 const Brands = ({item}) => {
     return (
@@ -42,7 +35,6 @@ const Brands = ({item}) => {
                     <Image src={item.img} />
                 </ImgContainer>
        ))}
-       <Button> Get Started </Button> 
         </Container>
     );
 };

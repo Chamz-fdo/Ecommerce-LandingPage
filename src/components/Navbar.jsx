@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-    padding: 10px 40px ;
+    padding: 10px 40px;
     font-family: 'montserrat';
     display: flex;
     align-items: center;
@@ -23,6 +23,7 @@ const Left =  styled.div`
     display: flex;
     align-items: center;
     margin-left: 0px;
+    margin-top: -70px;
 `;
 
 const Left1 =  styled.div`
@@ -30,6 +31,7 @@ const Left1 =  styled.div`
     display: flex;
     align-items: center;
     margin-left: 50px;
+    margin-top: -70px;
 `;
 
 const Right = styled.div`
@@ -37,6 +39,7 @@ const Right = styled.div`
     display: flex; 
     align-items: center;
     justify-content: flex-end;
+    margin-top: -70px;
 
 `;
 
@@ -95,8 +98,8 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
-    font-weight: bold;
     margin-left: 200px;
+    cursor: pointer;
 `;
 
 const MenuItem =  styled.div`
@@ -116,8 +119,9 @@ const ImgContainer = styled.div`
      diplay: flex;
 `;
 
-const Image = styled.div`
-     
+const Image = styled.img`
+     height: 100px;
+     width: 100px;
 `;
 
 const Navbar = () => {

@@ -41,21 +41,21 @@ export const popularProducts = [
     {
     id: 4,
     img: "/Images/item4.png",
-    },
+    }
 ];
 
 export const introItems = [
     {
     id: 1,
     backgroundImage: "/Images/miniBell1.jpg",  
-    },
+    }
 ];
 
 export const categories = [
     {
     id: 1,
     backgroundImage: "/Images/category.png", 
-    },
+    }
 
 ];
 
@@ -88,6 +88,13 @@ export const brands = [
     {
     id: 6,
     img: "/Images/logo6.png",
-    },
+    }
+];
+
+export const footerItems = [
+    {
+    id: 1,
+    backgroundImage : "/Images/logo.png",
+    }
 ];
 

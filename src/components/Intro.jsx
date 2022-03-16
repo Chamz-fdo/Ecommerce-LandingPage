@@ -2,8 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import { introItems} from "../data";
 
-
 const Container = styled.div`
+    margin-top: 50px;
     display: flex;
 `;
 

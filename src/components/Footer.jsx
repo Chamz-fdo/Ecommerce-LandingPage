@@ -1,10 +1,12 @@
 import { Twitter,Instagram,Facebook } from '@material-ui/icons';
 import React from 'react';
 import styled from "styled-components";
+import { footerItems } from '../data';
 
 const Container = styled.div`
     display: flex;
     background-color: #d4f2ff;
+    padding: 50px;
 `;
 
 const Left = styled.div`
@@ -18,10 +20,6 @@ const Logo = styled.h1`
 
 `;
 
-const Desc = styled.p`
-    margin: 20px 0px;
-`;
-
 const SocialContainer = styled.div`
     display: flex;
 `;
@@ -30,12 +28,16 @@ const SocialIcon = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    color: gray;
+    color: #75C6DC;
     background-color: #${props => props.color};
     display: center;
     justify-content: center;
     margin-right: 0--px;
+    cursor: pointer;
 
+    &:hover{
+        color: black;
+        transform: scale(1.1)
 `;
 
 const Center1 = styled.div`
@@ -65,7 +67,6 @@ const ListItem = styled.li`
     margin-bottom: 5px;
 `;
 
-
 const Right = styled.div`
     flex: 1;
     display: flex;
@@ -73,13 +74,27 @@ const Right = styled.div`
     padding: 20px;
 `;
 
+const ImgContainer = styled.div`
+    diplay: flex;
+`;
+
+const Image = styled.img`
+    margin-left: 70px;
+    height: 200px;
+    width: 200px;
+`;
 
 export const Footer = () => {
   return (
     <Container>
         <Left>
-        <Logo>miniBell.</Logo>
-        <Desc>Say Hi!</Desc>
+        <Logo>
+            {footerItems.map((item) =>(
+            <ImgContainer bg={item.bg} key={item.id}>
+                <Image src={item.backgroundImage} />
+            </ImgContainer>
+            ))}
+        </Logo>
         </Left>
         <Center1>
             <Title>Shop</Title>
@@ -105,13 +120,13 @@ export const Footer = () => {
             </List>
             <br/>
             <SocialContainer>
-                <SocialIcon color="gray">
+                <SocialIcon>
                     <Facebook/>
                 </SocialIcon>
-                <SocialIcon color="gray">
+                <SocialIcon>
                     <Instagram/>
                 </SocialIcon>
-                <SocialIcon color="gray">
+                <SocialIcon>
                     <Twitter/>
                 </SocialIcon>
             </SocialContainer>
@@ -119,5 +134,6 @@ export const Footer = () => {
     </Container>
   )
 }
+<hr></hr>
 
 export default Footer;
